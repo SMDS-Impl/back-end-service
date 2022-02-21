@@ -1,0 +1,29 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "postgres",
+  "password": "@vernom28_niyo",
+  "database": "cabuk_dev_db",
+  "synchronize": true,
+  "dropSchema": false,
+  "keepConnectionAlive": true,
+  "logging": false,
+  "entities": [
+    "C:\\Users\\user\\Documents\\workspaces\\TAKIT\\CABUK\\cabuk-be\\src\\database/../modules/**/*.entity{.ts,.js}"
+  ],
+  "migrations": [
+    "C:\\Users\\user\\Documents\\workspaces\\TAKIT\\CABUK\\cabuk-be\\src\\database/migrations/**/*{.ts,.js}"
+  ],
+  "seeds": [
+    "C:\\Users\\user\\Documents\\workspaces\\TAKIT\\CABUK\\cabuk-be\\src\\database/seeds/**/*{.ts,.js}"
+  ],
+  "factories": [
+    "C:\\Users\\user\\Documents\\workspaces\\TAKIT\\CABUK\\cabuk-be\\src\\database/factories/**/*{.ts,.js}"
+  ],
+  "cli": {
+    "entitiesDir": "src",
+    "migrationsDir": "src/database/migrations",
+    "subscribersDir": "subscriber"
+  }
+}
