@@ -28,10 +28,10 @@ $ npm start
 
 ```sh
 # Build the image
-$ docker build -t docker-cabuk-be:v1.0 .
+$ docker build -t smds-backend-service:v1.0 .
 
 # Run the image interactively
-$ docker run -it -p 3000:3000 docker-cabuk-be:v1.0
+$ docker run -it -p 3000:3000 smds-backend-service:v1.0
 $ docker rmi -f $(docker images -a -q)
 ```
 
