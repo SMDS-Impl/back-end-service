@@ -7,22 +7,22 @@ export class UserEntity {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @ApiProperty({example:'John', required: true})
+    @ApiProperty({example:'John Doe', required: true})
     @Column({
         type: 'varchar',
         nullable: false
     })
-    name: string;
+    full_name: string;
 
-    @ApiProperty({example:'0785436974', required: true})
+    @ApiProperty({example:'johnd@gmail.com', required: true})
     @Column({
         type: 'varchar',
         nullable: false,
         unique: true
     })
-    phone_number: string;
+    email: string;
 
-    @ApiProperty({example:'test@2022', required: true})
+    @ApiProperty({example:'Test@2022', required: true})
     @Column({
         type: 'varchar',
         nullable: false,
@@ -38,7 +38,7 @@ export class UserEntity {
     })
     role: EUserRole;
 
-    @ApiProperty({example: 'https://cloudinary.com/cabuk/uploads/profiles/1d-eda.png', required: false})
+    @ApiProperty({example: 'https://cloudinary.com/smds/uploads/profiles/1d-eda.png', required: false})
     @Column({
         type: 'varchar',
         nullable: true,

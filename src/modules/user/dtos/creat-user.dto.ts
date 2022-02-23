@@ -6,13 +6,7 @@ export class CreateUserDto {
     @ApiProperty({example: "John",required: true})
     @IsString()
     @IsNotEmpty()
-    name: string;
-
-    @ApiProperty({example: "0785436974",required: true})
-    @Matches('^\\d{8,11}$')
-    @IsString()
-    @IsNotEmpty()
-    phone_number: string;
+    full_name: string;
 
     @ApiProperty({example: "johndoe@gmail.com",required: true})
     @IsString()
@@ -20,18 +14,18 @@ export class CreateUserDto {
     @IsNotEmpty()
     email: string;
 
-    @ApiProperty({example: "test@gmail.com",required: true})
+    @ApiProperty({example: "Test@2022",required: true})
     @IsNotEmpty()
     @IsString()
     @MinLength(8)
     password: string;
 
-    @ApiProperty({example:"https://cloudinary.com/cabuk/uploads/profiles/1d-eda.png", required: false})
+    @ApiProperty({example:"https://cloudinary.com/smds/uploads/profiles/1d-eda.png", required: false})
     @IsOptional()
     @IsString()
     avatar_url: string;
 
-    @ApiProperty({example:EUserRole.CLIENT, required: false})
+    @ApiProperty({example:EUserRole.SCHOOL_ACCOUNTANT, required: false})
     @IsOptional()
     @IsNotEmpty()
     @IsEnum(EUserRole)

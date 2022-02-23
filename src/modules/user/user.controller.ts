@@ -1,10 +1,12 @@
-import { Body, Controller, HttpCode, Post } from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+import { Body, Controller, HttpCode, Post, UsePipes, ValidationPipe } from '@nestjs/common';
+import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
+import { ResponseEntity } from 'src/shared/dtos/response.dto';
 import { CreateUserDto } from './dtos/creat-user.dto';
 import { UserService } from './user.service';
+import { UserEntity } from './users.entity';
 
-@Controller('user')
-@ApiTags("User")
+@Controller('users')
+@ApiTags("Users")
 export class UserController {
     constructor(
         private readonly userService: UserService
@@ -17,9 +19,11 @@ export class UserController {
     */
     @Post('/')
     @HttpCode(201)
+    @UsePipes(new ValidationPipe({transform: true}))
+    @ApiOkResponse({type: UserEntity, description: "New user payload"})
     public async save(
         @Body() createUserDto: CreateUserDto
-    ): Promise<any>{
+    ): Promise<ResponseEntity>{
         return await this.userService.save(createUserDto);
     }
 }
