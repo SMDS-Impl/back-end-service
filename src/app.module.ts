@@ -8,6 +8,7 @@ import databaseConfig from './config/database.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './database/typeorm-config.service';
 import { UserModule } from './modules/user/user.module';
+import { CustomeResponseModule } from './utils/custome-response/custom-response.module';
 
 @Module({
   imports: [
@@ -16,16 +17,17 @@ import { UserModule } from './modules/user/user.module';
       load: [databaseConfig, appConfig],
       envFilePath: ['.env'],
     }),
-    // JwtModule.register({
-    //   secret: process.env.SECRETKEY,
-    //   signOptions: {
-    //     expiresIn: process.env.EXPIRESIN,
-    //   },
-    // }),
+    JwtModule.register({
+      secret: process.env.SECRETKEY,
+      signOptions: {
+        expiresIn: process.env.EXPIRESIN,
+      },
+    }),
     TypeOrmModule.forRootAsync({
       useClass: TypeOrmConfigService,
     }),
     UserModule,
+    CustomeResponseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
