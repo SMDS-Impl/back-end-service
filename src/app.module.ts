@@ -9,6 +9,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './database/typeorm-config.service';
 import { UserModule } from './modules/user/user.module';
 import { CustomeResponseModule } from './utils/custome-response/custom-response.module';
+import { MaterialModule } from './modules/material/material.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { CustomeResponseModule } from './utils/custome-response/custom-response.
       useClass: TypeOrmConfigService,
     }),
     UserModule,
+    MaterialModule,
     CustomeResponseModule,
   ],
   controllers: [AppController],
