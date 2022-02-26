@@ -84,5 +84,5 @@ Admin credentails
 
 ```json
 "email":"smdsadmin@gmail.com",
-"password:"Admin@2022"
+"password":"Admin@2022"
 ```
