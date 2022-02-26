@@ -5,7 +5,7 @@ import { ResponseEntity } from 'src/shared/dtos/response.dto';
 import { EResponseType } from 'src/shared/enums/EResponseType';
 import { CustomResponseService } from 'src/utils/custome-response/custom-response.service';
 import { Repository } from 'typeorm';
-import { CreateUserDto } from './dtos/creat-user.dto';
+import { CreateUserDto } from './dtos/create-user.dto';
 import { UserEntity } from './users.entity';
 
 const {SUCCESS} = EResponseType;

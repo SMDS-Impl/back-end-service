@@ -1,7 +1,7 @@
 import { Body, Controller, HttpCode, Post, UsePipes, ValidationPipe } from '@nestjs/common';
 import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { ResponseEntity } from 'src/shared/dtos/response.dto';
-import { CreateUserDto } from './dtos/creat-user.dto';
+import { CreateUserDto } from './dtos/create-user.dto';
 import { UserService } from './user.service';
 import { UserEntity } from './users.entity';
 
