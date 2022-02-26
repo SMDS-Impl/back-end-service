@@ -8,7 +8,8 @@ import databaseConfig from './config/database.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './database/typeorm-config.service';
 import { UserModule } from './modules/user/user.module';
-import { CustomeResponseModule } from './utils/custome-response/custom-response.module';
+import { CustomeResponseModule } from './utils/custom-response/custom-response.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -28,6 +29,7 @@ import { CustomeResponseModule } from './utils/custome-response/custom-response.
     }),
     UserModule,
     CustomeResponseModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

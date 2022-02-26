@@ -24,7 +24,7 @@ export default class CreateAdmin implements Seeder {
                     .values([
                         {
                             full_name: 'Admin',
-                            email: 'smdsAdmin@gmail.com',
+                            email: 'smdsadmin@gmail.com',
                             role: EUserRole.ADMIN,
                             password: await hashPassword('Admin@2022'),
                             is_verified: true,
