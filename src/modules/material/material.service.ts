@@ -2,7 +2,7 @@ import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ResponseEntity } from 'src/shared/dtos/response.dto';
 import { EResponseType } from 'src/shared/enums/EResponseType';
-import { CustomResponseService } from 'src/utils/custome-response/custom-response.service';
+import { CustomResponseService } from 'src/utils/custom-response/custom-response.service';
 import { Repository } from 'typeorm';
 import { CreateMaterialDto } from './dtos/create-material.dto';
 import { MaterialEntity } from './material.entity';
