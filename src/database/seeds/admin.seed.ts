@@ -12,7 +12,7 @@ export default class CreateAdmin implements Seeder {
                 .select()
                 .from(UserEntity, 'users')
                 .where('"users"."email" = :email', {
-                    email: 'smdsAdmin@gmail.com',
+                    email: 'smdsadmin@gmail.com',
                 })
                 .getOne();
 
