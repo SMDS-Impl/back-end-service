@@ -71,3 +71,18 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## Admin
+
+The default admin is seed into the db using 
+```sh
+$ yarn seed:run
+```
+If the seed failed that means that the admin was either seeded before or db-connection issues
+
+Admin credentails
+
+```json
+"email":"smdsadmin@gmail.com",
+"password:"Admin@2022"
+```
