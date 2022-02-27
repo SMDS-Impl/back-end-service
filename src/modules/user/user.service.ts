@@ -6,7 +6,7 @@ import { ResponseEntity } from 'src/shared/dtos/response.dto';
 import { EResponseType } from 'src/shared/enums/EResponseType';
 import { CustomResponseService } from 'src/utils/custom-response/custom-response.service';
 import { Repository } from 'typeorm';
-import { CreateUserDto } from './dtos/creat-user.dto';
+import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserEntity } from './users.entity';
 

@@ -8,6 +8,7 @@ import databaseConfig from './config/database.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfigService } from './database/typeorm-config.service';
 import { UserModule } from './modules/user/user.module';
+import { MaterialModule } from './modules/material/material.module';
 import { CustomeResponseModule } from './utils/custom-response/custom-response.module';
 import { AuthModule } from './modules/auth/auth.module';
 
@@ -28,6 +29,7 @@ import { AuthModule } from './modules/auth/auth.module';
       useClass: TypeOrmConfigService,
     }),
     UserModule,
+    MaterialModule,
     CustomeResponseModule,
     AuthModule,
   ],

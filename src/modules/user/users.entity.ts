@@ -30,7 +30,7 @@ export class UserEntity {
     })
     password: string;
    
-    @ApiProperty({example:'CLIENT', required: true})
+    @ApiProperty({example:'SCHOOL_ACCOUNTANT', required: true})
     @Column({
         type: 'enum',
         nullable: false,

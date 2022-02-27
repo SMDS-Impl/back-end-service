@@ -1,8 +1,7 @@
 import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put, UsePipes, ValidationPipe } from '@nestjs/common';
 import { ApiBearerAuth, ApiOkResponse, ApiParam, ApiTags } from '@nestjs/swagger';
-import { EUserRole } from 'src/enums/EUserRole';
 import { ResponseEntity } from 'src/shared/dtos/response.dto';
-import { CreateUserDto } from './dtos/creat-user.dto';
+import { CreateUserDto } from './dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserService } from './user.service';
 import { UserEntity } from './users.entity';
